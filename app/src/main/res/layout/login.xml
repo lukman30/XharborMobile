@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) Moh.Lukman Sholeh S.Kom
+  ~ Aplikasi ini mempunyai copyright, dilarang memperjual belikan aplikasi ini tanpa sepengetahuan programmer
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgimagee">
+
+
+    <RelativeLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_marginTop="37dp"-->
+        <!--android:layout_marginLeft="30dp">-->
+
+        <!--<ImageView-->
+
+        <!--android:id="@+id/signinback"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/back"-->
+        <!--android:padding="10dp"-->
+        <!--android:layout_gravity="center"-->
+
+        <!--/>-->
+
+
+        <!--<customfonts.MyTextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="SIGN IN"-->
+        <!--android:textSize="22dp"-->
+        <!--android:textColor="#ADCCE2"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:gravity="center"-->
+        <!--/>-->
+
+        <!--</LinearLayout>-->
+
+        <ImageView
+            android:layout_width="165dp"
+            android:layout_height="91dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="81dp"
+            android:src="@drawable/perintis" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="190dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="Perintis Nusantara
+"
+            android:textColor="@color/putih"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:theme="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="35dp"
+                    android:background="#0000"
+                    android:drawableRight="@drawable/ic_person_black_24dp"
+                    android:hint="Username"
+                    android:inputType="text"
+                    android:padding="16dp"
+                    android:textColor="@color/putih"
+                    android:textColorHint="@color/putih"
+                    android:textSize="13dp" />
+            </android.support.design.widget.TextInputLayout>
+            <!--<com.example.pelaporankejadiankarawang.customfonts.MyEditText-->
+                <!--android:id="@+id/username"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="22dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginRight="35dp"-->
+                <!--android:background="#0000"-->
+                <!--android:drawableRight="@drawable/user"-->
+                <!--android:hint="Username"-->
+                <!--android:inputType="text"-->
+                <!--android:padding="16dp"-->
+                <!--android:textColor="@color/colorAccent"-->
+                <!--android:textColorHint="@color/colorAccent"-->
+                <!--android:textSize="16dp" />-->
+
+
+            <View
+                android:layout_marginBottom="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@color/putih" />
+
+            <android.support.design.widget.TextInputLayout
+                android:theme="@style/TextLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginRight="35dp"
+                    android:background="#0000"
+                    android:drawableRight="@drawable/pasword"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:padding="16dp"
+                    android:textColor="@color/putih"
+                    android:textColorHint="@color/putih"
+                    android:textSize="13dp"
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--<com.example.pc_render.geofenchingandroid.customfonts.MyEditText-->
+            <!--android:id="@+id/password"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="22dp"-->
+            <!--android:layout_marginRight="35dp"-->
+            <!--android:background="#0000"-->
+            <!--android:drawableRight="@drawable/pasword"-->
+            <!--android:hint="Password"-->
+            <!--android:inputType="textPassword"-->
+            <!--android:maxLength="12"-->
+            <!--android:padding="16dp"-->
+            <!--android:textColor="@color/colorAccent"-->
+            <!--android:textColorHint="@color/colorAccent"-->
+            <!--android:textSize="16dp" />-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/putih" />
+
+
+            <com.example.scan_tiket_kapal.customfonts.Cardtext
+                android:id="@+id/signin"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/rect2"
+                android:gravity="center"
+                android:text="LOGIN"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+
+
+                />
+
+
+            <com.example.scan_tiket_kapal.customfonts.MyTextView
+                android:visibility="gone"
+                android:textStyle="italic"
+                android:id="@+id/acc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/signin"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:text="Belum Punya Akun?"
+                android:textColor="@color/colorAccent"
+                android:textSize="10dp"
+                 />
+
+
+            <com.example.scan_tiket_kapal.customfonts.MyTextView
+                android:visibility="gone"
+                android:id="@+id/daftar"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginBottom="32dp"
+                android:gravity="center"
+                android:text="Daftar Sekarang"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold"
+               />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

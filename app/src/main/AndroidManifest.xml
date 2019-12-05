@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.scan_tiket_kapal">
+
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".config.AppControler"
+        android:allowBackup="true"
+        android:icon="@mipmap/ickapall"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ickapall"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup,icon,theme,label">
+
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+
+        </activity>
+
+        <activity android:name=".Home"/>
+        <activity android:name=".SettingIp"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity android:name=".Login"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+
+
+
+
+<!--        <activity-->
+<!--            android:parentActivityName=".menumahasiswa.Menu"-->
+<!--            android:windowSoftInputMode="stateAlwaysHidden"-->
+<!--            android:name=".menumahasiswa.AlertInfo"/>-->
+<!--        <activity-->
+<!--            android:label="Scan Kode Batang"-->
+<!--            android:windowSoftInputMode="stateAlwaysHidden"-->
+<!--            android:name=".menumahasiswa.QrScanner"/>-->
+<!--        <activity-->
+<!--            android:parentActivityName=".menumahasiswa.Menu"-->
+<!--            android:label="Beranda Informasi"-->
+<!--            android:windowSoftInputMode="stateAlwaysHidden"-->
+<!--            android:name=".informasi.Informasi"/>-->
+<!--        <activity-->
+<!--            android:parentActivityName=".menumahasiswa.Menu"-->
+<!--            android:label="Beranda Histori"-->
+<!--            android:windowSoftInputMode="stateAlwaysHidden"-->
+<!--            android:name=".historipresensi.HistoriPresensi"/>-->
+
+<!--        <activity-->
+<!--            android:parentActivityName=".menudosen.MenuDosen"-->
+<!--            android:label="Qr Code"-->
+<!--            android:theme="@style/Theme.AppCompat.Light"-->
+<!--            android:windowSoftInputMode="stateAlwaysHidden"-->
+<!--            android:name=".dosen.QrCode"/>-->
+<!--        <activity-->
+<!--            android:parentActivityName=".menudosen.MenuDosen"-->
+<!--            android:label="Presensi Manual"-->
+<!--            android:theme="@style/Theme.AppCompat.Light"-->
+<!--            android:windowSoftInputMode="stateAlwaysHidden"-->
+<!--            android:name=".dosen.AbsenManual"/>-->
+    </application>
+
+
+
+</manifest>

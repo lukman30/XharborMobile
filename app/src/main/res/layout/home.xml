@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--<android.support.v7.widget.CardView-->
+
+            <!--style="@style/CardView.SS"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/container_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/text_label_page_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Page Indicator: " />
+
+                    <Spinner
+                        android:id="@+id/spinner_page_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/text_label_page_indicator" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/l22"
+                    android:background="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="Perintis Nusantara"
+                        android:textColor="#fff"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <!--                    <ImageView-->
+
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:id="@+id/off"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="25dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:src="@drawable/log"-->
+<!--                        android:layout_marginBottom="5dp"/>-->
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_below="@+id/l22"
+                    android:id="@+id/a"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:elevation="10dp">
+
+                    <ProgressBar
+                        android:visibility="gone"
+                        android:id="@+id/p1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/banner_slider1"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_below="@+id/p1"
+                        android:scaleType="centerCrop"
+
+
+                        />
+
+<!--                    <ss.com.bannerslider.views.BannerSlider-->
+<!--                        android:id="@+id/banner_slider1"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="170dp"-->
+<!--                        android:layout_below="@+id/p1"-->
+<!--                        android:scaleType="centerCrop"-->
+<!--                        app:animateIndicators="true"-->
+<!--                        app:defaultIndicators="dash"-->
+<!--                        app:interval="5000"-->
+<!--                        app:loopSlides="true"-->
+
+<!--                        />-->
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/a"
+                    android:layout_marginTop="1dp"
+                    android:orientation="vertical">
+
+
+                    <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:background="#257A97" />-->
+
+
+
+
+
+
+
+
+
+                    <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="8dp"-->
+                    <!--&gt;-->
+
+                    <!--<View-->
+                    <!--android:id="@+id/v1"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_marginTop="32dp"-->
+                    <!--android:layout_toLeftOf="@+id/id1"-->
+                    <!--android:background="@color/colorPrimary" />-->
+
+                    <!--<com.example.e_antrian_pasien.customfonts.MyTextView-->
+
+                    <!--android:id="@+id/id1"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginLeft="4dp"-->
+                    <!--android:layout_marginTop="23dp"-->
+                    <!--android:layout_marginRight="4dp"-->
+                    <!--android:text="Beranda Informasi"-->
+                    <!--android:textStyle="bold" />-->
+
+                    <!--<View-->
+                    <!--android:id="@+id/v2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:layout_alignTop="@+id/v1"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_toRightOf="@+id/id1"-->
+                    <!--android:background="@color/colorPrimary" />-->
+
+
+                    <!--</RelativeLayout>-->
+
+
+
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        android:weightSum="10"
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp">
+
+
+                        <GridLayout
+
+                            android:id="@+id/mainGrid"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            android:alignmentMode="alignMargins"
+                            android:background="#fff"
+                            android:columnCount="3"
+                            android:columnOrderPreserved="false"
+                            android:padding="10dp"
+                            android:rowCount="2">
+
+                            <!-- Row 1 -->
+
+                            <!-- Column 1 -->
+                            <android.support.v7.widget.CardView
+
+                                android:id="@+id/scan"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="16dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal|center_vertical"
+                                    android:layout_margin="6dp"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:src="@drawable/scann" />
+
+                                    <com.example.scan_tiket_kapal.customfonts.MyTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:gravity="center"
+                                        android:text="Penumpang"
+                                        android:textAlignment="center"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+                            <!-- Column 2 -->
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/histori"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="16dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal|center_vertical"
+                                    android:layout_margin="6dp"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:src="@drawable/scann" />
+
+                                    <com.example.scan_tiket_kapal.customfonts.MyTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:gravity="center"
+                                        android:text="Kargo"
+                                        android:textAlignment="center"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+
+                            <!-- Row 2 -->
+
+                            <!-- Column 1 -->
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/tentang"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_columnWeight="1"
+
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="16dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal|center_vertical"
+                                    android:layout_margin="6dp"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:src="@drawable/abouttt" />
+
+                                    <com.example.scan_tiket_kapal.customfonts.MyTextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        android:gravity="center"
+                                        android:text="Tentang"
+                                        android:textAlignment="center"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </android.support.v7.widget.CardView>
+
+
+                        </GridLayout>
+
+                    </LinearLayout>
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="0dp"
+                        android:visibility="gone">
+
+                        <View
+                            android:id="@+id/v1111"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="32dp"
+                            android:layout_toLeftOf="@+id/id1111"
+                            android:background="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/id1111"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="23dp"
+                            android:layout_marginRight="4dp"
+                            android:text="Pilihan Beranda"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/v2111"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignTop="@+id/v1111"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toRightOf="@+id/id1111"
+                            android:background="@color/colorPrimary" />
+
+
+                    </RelativeLayout>
+
+
+
+
+
+
+                    <RelativeLayout
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp">
+
+
+                        <View
+                            android:id="@+id/v111"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="32dp"
+                            android:layout_toLeftOf="@+id/id111"
+                            android:background="@color/colorPrimary" />
+
+                        <com.example.scan_tiket_kapal.customfonts.MyTextView
+                            android:id="@+id/id111"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginTop="23dp"
+                            android:layout_marginRight="4dp"
+                            android:text="History Scan"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/v211"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignTop="@+id/v111"
+                            android:layout_alignParentEnd="true"
+                            android:layout_toRightOf="@+id/id111"
+                            android:background="@color/colorPrimary" />
+
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/Container1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+<!--                        <ProgressBar-->
+
+<!--                            android:id="@+id/p2"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content" />-->
+
+<!--                        <android.support.v7.widget.RecyclerView-->
+<!--                            android:nestedScrollingEnabled="false"-->
+<!--                            android:id="@+id/recyclerviewTemp"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+
+<!--                            />-->
+
+
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:background="#2196F3"
+                            android:layout_marginTop="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="CODE001" />
+
+
+                            <View
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#d6d6d6"
+                                android:layout_marginBottom="10dp"/>
+
+
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name : Siti Rohani" />
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_marginBottom="15dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Status : Success" />
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:background="#2196F3"
+                            android:layout_marginTop="6dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="CODE002" />
+
+
+                            <View
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#d6d6d6"
+                                android:layout_marginBottom="10dp"/>
+
+
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name : Barak" />
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_marginBottom="15dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Status : Success" />
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:background="#2196F3"
+                            android:layout_marginTop="6dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginRight="10dp"
+
+                                android:text="CODE003"
+                                android:textColor="#fff"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#d6d6d6"
+                                android:layout_marginBottom="10dp"/>
+
+
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name : Lukman" />
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_marginBottom="15dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Status : Success" />
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:background="#2196F3"
+                            android:layout_marginTop="6dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="CODE004" />
+
+
+                            <View
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#d6d6d6"
+                                android:layout_marginBottom="10dp"/>
+
+
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name : Sulistiyo" />
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_marginBottom="15dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Status : Success" />
+
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:background="#2196F3"
+                            android:layout_marginTop="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="CODE005" />
+
+
+                            <View
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#d6d6d6"
+                                android:layout_marginBottom="10dp"/>
+
+
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name : Firdaus" />
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_marginBottom="15dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Status : Success" />
+
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:background="#2196F3"
+                            android:layout_marginTop="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="CODE006" />
+
+
+                            <View
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#d6d6d6"
+                                android:layout_marginBottom="10dp"/>
+
+
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name : Boy Wiliam" />
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_marginBottom="15dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Status : Success" />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:background="#2196F3"
+                            android:layout_marginTop="2dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+
+                            <TextView
+                                android:textColor="#fff"
+                                android:textSize="14sp"
+                                android:textStyle="bold"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:text="CODE001" />
+
+
+                            <View
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#d6d6d6"
+                                android:layout_marginBottom="10dp"/>
+
+
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name : Ryzen" />
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+
+                                android:layout_marginBottom="15dp"
+                                android:textColor="#fff"
+                                android:textSize="11sp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Status : Success" />
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <Button
+                            android:visibility="gone"
+                            android:layout_marginBottom="40dp"
+                            android:id="@+id/saran"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+
+
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/rect"
+                            android:text="Kritik dan Saran"
+                            android:textColor="#ffff" />
+
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+
+                        <ImageView
+                            android:id="@+id/image_logo"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_toRightOf="@id/image_logo"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Customization"
+                                android:textColor="@android:color/black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2dp"
+                                android:text="you can test various settings from here" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="#ddd" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/banner_slider_settings_margin"
+                        android:layout_marginRight="@dimen/banner_slider_settings_margin"
+                        android:layout_marginBottom="@dimen/standard_margin"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/text_label_interval"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:text="@string/label_interval"
+                            tools:ignore="RtlCompat" />
+
+                        <SeekBar
+                            android:id="@+id/seekbar_interval"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/text_label_interval"
+                            tools:ignore="RtlCompat" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/banner_slider_settings_margin"
+                        android:layout_marginRight="@dimen/banner_slider_settings_margin"
+                        android:layout_marginBottom="@dimen/standard_margin"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/text_label_indicator_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="@dimen/standard_margin"
+                            android:text="@string/label_indicator_size"
+                            tools:ignore="RtlCompat" />
+
+                        <SeekBar
+                            android:id="@+id/seekbar_indicator_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/text_label_indicator_size"
+                            tools:ignore="RtlCompat" />
+
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/checkbox_loop_slides"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/banner_slider_settings_margin"
+                        android:layout_marginRight="@dimen/banner_slider_settings_margin"
+                        android:layout_marginBottom="@dimen/standard_margin"
+                        android:text="@string/label_loop_slides"
+                        android:textColor="@color/holo_gray" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/checkbox_animate_indicators"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/banner_slider_settings_margin"
+                        android:layout_marginRight="@dimen/banner_slider_settings_margin"
+                        android:layout_marginBottom="@dimen/standard_margin"
+                        android:text="@string/label_animate_indicators"
+
+                        android:textColor="@color/holo_gray" />
+
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/checkbox_hide_indicators"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/banner_slider_settings_margin"
+                        android:layout_marginRight="@dimen/banner_slider_settings_margin"
+                        android:text="@string/label_hide_indicators"
+
+                        android:textColor="@color/holo_gray" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+            <!--</android.support.v7.widget.CardView>-->
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+<!--    <android.support.design.widget.FloatingActionButton-->
+<!--        android:id="@+id/fab"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_margin="@dimen/fab_margin"-->
+<!--        android:src="@drawable/kritik" />-->
+
+</android.support.design.widget.CoordinatorLayout>
