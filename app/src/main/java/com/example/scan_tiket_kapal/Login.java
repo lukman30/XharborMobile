@@ -24,6 +24,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.scan_tiket_kapal.config.AppControler;
 import com.example.scan_tiket_kapal.config.PrefManager;
 import com.example.scan_tiket_kapal.config.Server;
+import com.example.scan_tiket_kapal.config.SettingIPAwal;
+import com.example.scan_tiket_kapal.config.SettingIp;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -68,7 +70,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     public static final String KEYLEVEL = "key_level";
 
 
-    private SharedPreferences prefssatu, prefpassword, level;
+    private SharedPreferences prefssatu, prefpassword, ipaplikasi;
     private ProgressDialog pDialog;
 
     //String usernameambil,passwordambil;
@@ -79,7 +81,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG_MESSAGE = "message";
     String tag_json_obj = "json_obj_req";
 
-    String ambiliduser;
+    String ambiliduser,url;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -105,34 +107,33 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 Login.KEYIDUSER, "username");
 
 
-        String levell;
-        level = getSharedPreferences(
-                Login.LEVEL,
+
+
+        ipaplikasi = getSharedPreferences(
+                SettingIp.IPAPLIKASI,
                 Context.MODE_PRIVATE +
                         Context.MODE_PRIVATE | Context.MODE_PRIVATE);
-        levell = level.getString(
-                Login.KEYLEVEL, "level");
+        url="http://"+ipaplikasi.getString(
+                SettingIp.KEYAPLIKASI, "192.xxx.xxx.xxx")+"/xharbor/";
 
 
 
-//
-//
-//        prefManager = new PrefManager(this);
-//        if (!prefManager.isFirstTimeLaunch()) {
-//
-//
-//
-//            prefManager.setFirstTimeLaunch(false);
-//            Intent i = new Intent(Login.this, MenuAwalHomeClass.class);
-//            startActivity(i);
-//            finish();
-//
-//
-//
-//
-//
-//
-//        }
+        prefManager = new PrefManager(this);
+        if (!prefManager.isFirstTimeLaunch()) {
+
+
+
+            prefManager.setFirstTimeLaunch(false);
+            Intent i = new Intent(Login.this, Home.class);
+            startActivity(i);
+            finish();
+
+
+
+
+
+
+        }
 
         cepermission();
 
@@ -143,8 +144,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.daftar:
-//                Intent it = new Intent(Login.this, Daftar.class);
-//                startActivity(it);
+                Intent it = new Intent(Login.this, SettingIPAwal.class);
+                startActivity(it);
                 break;
             case R.id.signin:
                 if (username.length() < 1) {
@@ -304,10 +305,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
 
     private void Login() {
-        System.out.println(Server.URL + "web_service/login.php");
-        //menampilkan progress dialog
+
         final ProgressDialog loading = ProgressDialog.show(this, "Login...", " Mohon Tunggu...", false, false);
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Server.URL + "web_service/login.php",
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, url + "web_service/login.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -320,16 +320,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                             if (success == 1) {
                                 Toast.makeText(Login.this, jObj.getString("message"), Toast.LENGTH_LONG).show();
 
+                                prefManager.setFirstTimeLaunch(false);
+                                Intent i = new Intent(Login.this, Home.class);
+                                startActivity(i);
+                                finish();
 
-
-
-//
-//
-//                                prefManager.setFirstTimeLaunch(false);
-//                                Intent i = new Intent(Login.this, MenuAwalHomeClass.class);
-//                                startActivity(i);
-//                                finish();
-//
 
 
 

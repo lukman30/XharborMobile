@@ -42,4 +42,12 @@
     <color name="sudahbaca">#ffffff</color>
 
     <color name="putih">#ffffff</color>
+
+
+
+    <color name="df_transparent_black_background">#80000000</color>
+    <color name="whiteCardColor">#fff</color>
+    <color name="whiteTextColor">#fff</color>
+    <color name="blackTextColor">#000</color>
+
 </resources>

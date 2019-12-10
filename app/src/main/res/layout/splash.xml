@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c) Moh.Lukman Sholeh S.Kom
   ~ Aplikasi ini mempunyai copyright, dilarang memperjual belikan aplikasi ini tanpa sepengetahuan programmer
   -->
@@ -10,33 +9,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+
     android:gravity="center"
-    android:background="#fff"
+
 
     >
+
+
     <LinearLayout
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical">
 
 
         <ImageView
-            android:layout_gravity="center"
             android:id="@+id/y"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
             android:src="@drawable/perintis" />
 
-        <TextView
+        <com.example.scan_tiket_kapal.customfonts.GoMytext
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="Perintis Nusantara"
-            android:textColor="#BE2424"
-            android:textSize="14sp" />
+            android:text="Xharbor"
+            android:textColor="#6F6F6F"
+            android:textSize="19sp" />
+        <com.example.scan_tiket_kapal.customfonts.GoMytextMini
+            android:textColor="#B1AEAE"
+            android:id="@+id/spinAndWinReward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            style="@style/learnhubTitleText"
+            android:textStyle="normal"
+            android:textSize="9dp"
+            android:text="Application for Sea Transportation"/>
+
+        <ProgressBar
+            android:id="@+id/splashProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
 
 
     </LinearLayout>

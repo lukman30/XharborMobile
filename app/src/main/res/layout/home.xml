@@ -52,77 +52,129 @@
                         android:layout_toRightOf="@id/text_label_page_indicator" />
                 </RelativeLayout>
 
+                <!--                <LinearLayout-->
+                <!--                    android:id="@+id/l22"-->
+                <!--                    android:background="@color/colorPrimary"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="40dp"-->
+                <!--                    android:orientation="vertical">-->
+
+                <!--                    <TextView-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="wrap_content"-->
+                <!--                        android:layout_gravity="center"-->
+                <!--                        android:layout_marginTop="10dp"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:text="Perintis Nusantara"-->
+                <!--                        android:textColor="#fff"-->
+                <!--                        android:textSize="15sp"-->
+                <!--                        android:textStyle="bold" />-->
+
+                <!--                    <ImageView-->
+
+                <!--                        android:layout_marginTop="5dp"-->
+                <!--                        android:id="@+id/off"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="25dp"-->
+                <!--                        android:layout_gravity="center"-->
+                <!--                        android:src="@drawable/log"-->
+                <!--                        android:layout_marginBottom="5dp"/>-->
+
+
+                <!--                </LinearLayout>-->
+
+
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_alignParentTop="true"-->
+                <!--                    android:weightSum="12">-->
+
                 <LinearLayout
-                    android:id="@+id/l22"
-                    android:background="@color/colorPrimary"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/login_shape_bk"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.example.scan_tiket_kapal.customfonts.GoMytext
+                        android:id="@+id/user"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center"
-                        android:text="Perintis Nusantara"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Selamat Datang"
                         android:textColor="#fff"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp" />
+                    <com.example.scan_tiket_kapal.customfonts.GoMytextMini
+                        android:id="@+id/ipserver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Ip Server :"
+                        android:textColor="#fff"
+                        android:textSize="14sp" />
 
-                    <!--                    <ImageView-->
+                    <!--                    <View-->
+                    <!--                        android:layout_marginBottom="5dp"-->
+                    <!--                        android:layout_marginRight="10dp"-->
+                    <!--                        android:layout_marginLeft="10dp"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="1dp"-->
+                    <!--                        android:background="#fff"/>-->
 
-<!--                        android:layout_marginTop="5dp"-->
-<!--                        android:id="@+id/off"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="25dp"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:src="@drawable/log"-->
-<!--                        android:layout_marginBottom="5dp"/>-->
-
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:background="@drawable/ic_login_bk"
+                        android:contentDescription="login background" />
 
                 </LinearLayout>
 
+                <!--                                </LinearLayout>-->
+
                 <android.support.v7.widget.CardView
-                    android:layout_below="@+id/l22"
+
                     android:id="@+id/a"
                     android:layout_width="match_parent"
                     android:layout_height="170dp"
+                    android:layout_below="@+id/l22"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="42dp"
                     android:layout_marginRight="10dp"
                     android:elevation="10dp">
 
                     <ProgressBar
-                        android:visibility="gone"
                         android:id="@+id/p1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
 
-                    <ImageView
+                    <!--                    <ImageView-->
+                    <!--                        android:id="@+id/banner_slider1"-->
+                    <!--                        android:layout_marginBottom="20dp"-->
+                    <!--                        android:background="@drawable/slider"-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="170dp"-->
+                    <!--                        android:layout_below="@+id/p1"-->
+                    <!--                        android:scaleType="centerCrop"-->
+
+
+                    <!--                        />-->
+
+                    <ss.com.bannerslider.views.BannerSlider
                         android:id="@+id/banner_slider1"
-                        android:layout_marginBottom="20dp"
-                        android:background="@drawable/slider"
                         android:layout_width="match_parent"
                         android:layout_height="170dp"
                         android:layout_below="@+id/p1"
                         android:scaleType="centerCrop"
-
+                        app:animateIndicators="true"
+                        app:defaultIndicators="dash"
+                        app:interval="5000"
+                        app:loopSlides="true"
 
                         />
-
-<!--                    <ss.com.bannerslider.views.BannerSlider-->
-<!--                        android:id="@+id/banner_slider1"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="170dp"-->
-<!--                        android:layout_below="@+id/p1"-->
-<!--                        android:scaleType="centerCrop"-->
-<!--                        app:animateIndicators="true"-->
-<!--                        app:defaultIndicators="dash"-->
-<!--                        app:interval="5000"-->
-<!--                        app:loopSlides="true"-->
-
-<!--                        />-->
                 </android.support.v7.widget.CardView>
 
                 <LinearLayout
@@ -138,13 +190,6 @@
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="1dp"-->
                     <!--android:background="#257A97" />-->
-
-
-
-
-
-
-
 
 
                     <!--<RelativeLayout-->
@@ -187,165 +232,172 @@
 
                     <!--</RelativeLayout>-->
 
-
-
-                    <LinearLayout
-                        android:layout_marginRight="10dp"
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="10"
-                        android:layout_width="match_parent"
-                        android:layout_height="110dp">
+                        android:layout_marginRight="10dp"
+                        android:elevation="10dp">
 
-
-                        <GridLayout
-
-                            android:id="@+id/mainGrid"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="8"
-                            android:alignmentMode="alignMargins"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
                             android:background="#fff"
-                            android:columnCount="3"
-                            android:columnOrderPreserved="false"
-                            android:padding="10dp"
-                            android:rowCount="2">
+                            android:orientation="vertical"
+                            android:weightSum="10">
 
-                            <!-- Row 1 -->
 
-                            <!-- Column 1 -->
-                            <android.support.v7.widget.CardView
+                            <GridLayout
 
-                                android:id="@+id/scan"
-                                android:layout_width="0dp"
+                                android:id="@+id/mainGrid"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_columnWeight="1"
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="16dp"
-                                app:cardCornerRadius="8dp"
-                                app:cardElevation="0dp">
+                                android:layout_weight="6"
+                                android:alignmentMode="alignMargins"
 
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
+                                android:columnCount="3"
+                                android:columnOrderPreserved="false"
+                                android:padding="10dp"
+                                android:rowCount="2">
+
+                                <!-- Row 1 -->
+
+                                <!-- Column 1 -->
+                                <android.support.v7.widget.CardView
+
+                                    android:id="@+id/scanpenumpang"
+                                    android:layout_width="0dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal|center_vertical"
-                                    android:layout_margin="6dp"
-                                    android:orientation="vertical">
+                                    android:layout_columnWeight="1"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_marginBottom="16dp"
+                                    app:cardCornerRadius="8dp"
+                                    app:cardElevation="0dp">
 
-                                    <ImageView
+                                    <LinearLayout
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
-                                        android:layout_gravity="center_horizontal"
-                                        android:src="@drawable/scann" />
-
-                                    <com.example.scan_tiket_kapal.customfonts.MyTextView
-                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="4dp"
-                                        android:gravity="center"
-                                        android:text="Penumpang"
-                                        android:textAlignment="center"
-                                        android:textColor="@android:color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold" />
+                                        android:layout_gravity="center_horizontal|center_vertical"
+                                        android:layout_margin="6dp"
+                                        android:orientation="vertical">
 
-                                </LinearLayout>
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center_horizontal"
+                                            android:src="@drawable/scann" />
 
-                            </android.support.v7.widget.CardView>
+                                        <com.example.scan_tiket_kapal.customfonts.GoMytextMini
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:gravity="center"
+                                            android:text="Penumpang"
+                                            android:textAlignment="center"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
 
-                            <!-- Column 2 -->
-                            <android.support.v7.widget.CardView
-                                android:id="@+id/histori"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_columnWeight="1"
+                                    </LinearLayout>
 
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="16dp"
-                                app:cardCornerRadius="8dp"
-                                app:cardElevation="0dp">
+                                </android.support.v7.widget.CardView>
 
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
+                                <!-- Column 2 -->
+                                <android.support.v7.widget.CardView
+                                    android:id="@+id/scankargo"
+                                    android:layout_width="0dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal|center_vertical"
-                                    android:layout_margin="6dp"
-                                    android:orientation="vertical">
+                                    android:layout_columnWeight="1"
 
-                                    <ImageView
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_marginBottom="16dp"
+                                    app:cardCornerRadius="8dp"
+                                    app:cardElevation="0dp">
+
+                                    <LinearLayout
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
-                                        android:layout_gravity="center_horizontal"
-                                        android:src="@drawable/scann" />
-
-                                    <com.example.scan_tiket_kapal.customfonts.MyTextView
-                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="4dp"
-                                        android:gravity="center"
-                                        android:text="Kargo"
-                                        android:textAlignment="center"
-                                        android:textColor="@android:color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold" />
+                                        android:layout_gravity="center_horizontal|center_vertical"
+                                        android:layout_margin="6dp"
+                                        android:orientation="vertical">
 
-                                </LinearLayout>
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center_horizontal"
+                                            android:src="@drawable/scann" />
 
-                            </android.support.v7.widget.CardView>
+                                        <com.example.scan_tiket_kapal.customfonts.GoMytextMini
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:gravity="center"
+                                            android:text="Kargo"
+                                            android:textAlignment="center"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </android.support.v7.widget.CardView>
 
 
-                            <!-- Row 2 -->
+                                <!-- Row 2 -->
 
-                            <!-- Column 1 -->
-                            <android.support.v7.widget.CardView
-                                android:id="@+id/tentang"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_columnWeight="1"
-
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="16dp"
-                                app:cardCornerRadius="8dp"
-                                app:cardElevation="0dp">
-
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
+                                <!-- Column 1 -->
+                                <android.support.v7.widget.CardView
+                                    android:id="@+id/about"
+                                    android:layout_width="0dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center_horizontal|center_vertical"
-                                    android:layout_margin="6dp"
-                                    android:orientation="vertical">
+                                    android:layout_columnWeight="1"
 
-                                    <ImageView
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:layout_marginBottom="16dp"
+                                    app:cardCornerRadius="8dp"
+                                    app:cardElevation="0dp">
+
+                                    <LinearLayout
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
-                                        android:layout_gravity="center_horizontal"
-                                        android:src="@drawable/abouttt" />
-
-                                    <com.example.scan_tiket_kapal.customfonts.MyTextView
-                                        android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="4dp"
-                                        android:gravity="center"
-                                        android:text="Tentang"
-                                        android:textAlignment="center"
-                                        android:textColor="@android:color/black"
-                                        android:textSize="12sp"
-                                        android:textStyle="bold" />
+                                        android:layout_gravity="center_horizontal|center_vertical"
+                                        android:layout_margin="6dp"
+                                        android:orientation="vertical">
 
-                                </LinearLayout>
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="40dp"
+                                            android:layout_gravity="center_horizontal"
+                                            android:src="@drawable/abouttt" />
 
-                            </android.support.v7.widget.CardView>
+                                        <com.example.scan_tiket_kapal.customfonts.GoMytextMini
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:gravity="center"
+                                            android:text="Tentang"
+                                            android:textAlignment="center"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </android.support.v7.widget.CardView>
 
 
-                        </GridLayout>
+                            </GridLayout>
 
-                    </LinearLayout>
+                        </LinearLayout>
 
-
+                    </android.support.v7.widget.CardView>
 
 
                     <RelativeLayout
@@ -389,15 +441,11 @@
                     </RelativeLayout>
 
 
-
-
-
-
                     <RelativeLayout
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="10dp">
 
 
@@ -411,7 +459,7 @@
                             android:layout_toLeftOf="@+id/id111"
                             android:background="@color/colorPrimary" />
 
-                        <com.example.scan_tiket_kapal.customfonts.MyTextView
+                        <com.example.scan_tiket_kapal.customfonts.GoMytext
                             android:id="@+id/id111"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -420,7 +468,7 @@
                             android:layout_marginLeft="4dp"
                             android:layout_marginTop="23dp"
                             android:layout_marginRight="4dp"
-                            android:text="History Scan"
+                            android:text="Histori Scan"
                             android:textStyle="bold" />
 
                         <View
@@ -434,446 +482,81 @@
 
 
                     </RelativeLayout>
+                    <!--                    <android.support.v7.widget.CardView-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:elevation="10dp"-->
+                    <!--                        android:layout_marginLeft="20dp"-->
+                    <!--                        android:layout_marginRight="20dp">-->
                     <LinearLayout
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
                         android:id="@+id/Container1"
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:orientation="vertical">
-
-<!--                        <ProgressBar-->
-
-<!--                            android:id="@+id/p2"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content" />-->
-
-<!--                        <android.support.v7.widget.RecyclerView-->
-<!--                            android:nestedScrollingEnabled="false"-->
-<!--                            android:id="@+id/recyclerviewTemp"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-
-<!--                            />-->
-
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/onboarding_button"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp">
 
 
                         <LinearLayout
-                            android:orientation="vertical"
-                            android:background="#2196F3"
-                            android:layout_marginTop="2dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@drawable/ic_login_bk"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            >
+                            android:orientation="vertical">
 
 
-                            <TextView
-                                android:textColor="#fff"
-                                android:textSize="14sp"
-                                android:textStyle="bold"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
-                                android:text="CODE001" />
-
-
-                            <View
-                                android:layout_marginTop="5dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="#d6d6d6"
-                                android:layout_marginBottom="10dp"/>
-
-
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
+                            <com.example.scan_tiket_kapal.customfonts.GoMytextMini
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Name : Siti Rohani" />
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_marginBottom="15dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Status : Success" />
-
-
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:background="#2196F3"
-                            android:layout_marginTop="6dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            >
-
-
-                            <TextView
-                                android:textColor="#fff"
-                                android:textSize="14sp"
-                                android:textStyle="bold"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
-                                android:text="CODE002" />
-
-
-                            <View
-                                android:layout_marginTop="5dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="#d6d6d6"
-                                android:layout_marginBottom="10dp"/>
-
-
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Name : Barak" />
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_marginBottom="15dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Status : Success" />
-
-
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:background="#2196F3"
-                            android:layout_marginTop="6dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            >
-
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginTop="12dp"
                                 android:layout_marginRight="10dp"
-
-                                android:text="CODE003"
+                                android:text="Belum Ada Data Yang diScan"
                                 android:textColor="#fff"
                                 android:textSize="14sp"
                                 android:textStyle="bold" />
 
-                            <View
-                                android:layout_marginTop="5dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="#d6d6d6"
-                                android:layout_marginBottom="10dp"/>
 
-
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Name : Lukman" />
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_marginBottom="15dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Status : Success" />
-
-
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:background="#2196F3"
-                            android:layout_marginTop="6dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            >
-
-
-                            <TextView
-                                android:textColor="#fff"
-                                android:textSize="14sp"
-                                android:textStyle="bold"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
-                                android:text="CODE004" />
-
-
-                            <View
-                                android:layout_marginTop="5dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="#d6d6d6"
-                                android:layout_marginBottom="10dp"/>
-
-
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Name : Sulistiyo" />
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_marginBottom="15dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Status : Success" />
-
-
-
-                        </LinearLayout>
-
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:background="#2196F3"
-                            android:layout_marginTop="2dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            >
-
-
-                            <TextView
-                                android:textColor="#fff"
-                                android:textSize="14sp"
-                                android:textStyle="bold"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
-                                android:text="CODE005" />
-
-
-                            <View
-                                android:layout_marginTop="5dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="#d6d6d6"
-                                android:layout_marginBottom="10dp"/>
-
-
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Name : Firdaus" />
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_marginBottom="15dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Status : Success" />
-
-
-
-                        </LinearLayout>
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:background="#2196F3"
-                            android:layout_marginTop="2dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            >
-
-
-                            <TextView
-                                android:textColor="#fff"
-                                android:textSize="14sp"
-                                android:textStyle="bold"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
-                                android:text="CODE006" />
-
-
-                            <View
-                                android:layout_marginTop="5dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="#d6d6d6"
-                                android:layout_marginBottom="10dp"/>
-
-
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Name : Boy Wiliam" />
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_marginBottom="15dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Status : Success" />
-
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:background="#2196F3"
-                            android:layout_marginTop="2dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            >
-
-
-                            <TextView
-                                android:textColor="#fff"
-                                android:textSize="14sp"
-                                android:textStyle="bold"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
-                                android:text="CODE001" />
-
-
-                            <View
-                                android:layout_marginTop="5dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:background="#d6d6d6"
-                                android:layout_marginBottom="10dp"/>
-
-
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Name : Ryzen" />
-                            <TextView
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-
-                                android:layout_marginBottom="15dp"
-                                android:textColor="#fff"
-                                android:textSize="11sp"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Status : Success" />
-
+<!--                            <View-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="1dp"-->
+<!--                                android:layout_marginLeft="10dp"-->
+<!--                                android:layout_marginTop="5dp"-->
+<!--                                android:layout_marginRight="10dp"-->
+<!--                                android:layout_marginBottom="10dp"-->
+<!--                                android:background="#fff" />-->
 
 
                         </LinearLayout>
 
 
                     </LinearLayout>
-
-
-
-
-
-
-
-
-
-
+                    <!--                    </android.support.v7.widget.CardView>-->
 
 
                     <LinearLayout
-                        android:layout_marginRight="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="30dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        >
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp">
 
                         <Button
-                            android:visibility="gone"
-                            android:layout_marginBottom="40dp"
                             android:id="@+id/saran"
                             android:layout_width="fill_parent"
                             android:layout_height="40dp"
-
-
                             android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="40dp"
+
+
                             android:background="@drawable/rect"
                             android:text="Kritik dan Saran"
-                            android:textColor="#ffff" />
-
+                            android:textColor="#ffff"
+                            android:visibility="gone" />
 
 
                     </LinearLayout>
@@ -1025,12 +708,12 @@
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
-<!--    <android.support.design.widget.FloatingActionButton-->
-<!--        android:id="@+id/fab"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|end"-->
-<!--        android:layout_margin="@dimen/fab_margin"-->
-<!--        android:src="@drawable/kritik" />-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_wifi_tethering_black_24dp" />
 
 </android.support.design.widget.CoordinatorLayout>

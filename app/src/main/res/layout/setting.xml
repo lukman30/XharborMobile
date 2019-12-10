@@ -36,18 +36,18 @@
 
                 android:id="@+id/kapal"
                 android:layout_width="165dp"
-                android:layout_height="81dp"
+                android:layout_height="71dp"
                 android:src="@drawable/perintis" />
 
-            <TextView
-                android:layout_marginTop="12dp"
-                android:layout_below="@+id/kapal"
+            <com.example.scan_tiket_kapal.customfonts.GoMytext
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/kapal"
+                android:layout_marginTop="12dp"
                 android:gravity="center"
                 android:text="Setting IP"
                 android:textColor="#fff"
-                android:textSize="13sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -64,7 +64,7 @@
 
                 <EditText
 
-                    android:id="@+id/username"
+                    android:id="@+id/ip"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginTop="20dp"
@@ -115,10 +115,10 @@
             <!--android:textSize="16dp" />-->
 
 
-            <TextView
+            <com.example.scan_tiket_kapal.customfonts.GoMytext
                 android:id="@+id/simpan"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="12dp"
@@ -128,7 +128,7 @@
                 android:gravity="center"
                 android:text="SIMPAN"
                 android:textColor="@color/white"
-                android:textSize="13dp"
+                android:textSize="15dp"
 
 
                 />

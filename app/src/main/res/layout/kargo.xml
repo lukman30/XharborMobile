@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Header aligned to top -->
+        <RelativeLayout
+
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+
+            android:gravity="center">
+
+            <LinearLayout
+                android:background="@color/colorAccent"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/atas"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_shape_bk"
+                    android:orientation="vertical">
+
+
+                    <EditText
+
+                        android:cursorVisible="false"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:id="@+id/search_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/search_bg"
+                        android:fontFamily="sans-serif-light"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:hint="Cari Kargo..."
+                        android:maxLines="1"
+                        android:padding="9dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/darker_gray"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="5dp"/>
+
+
+
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:background="@drawable/ic_login_bk"
+                        android:contentDescription="login background" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <!-- Content below header and above footer -->
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/header"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/perintis" />
+
+            <com.example.scan_tiket_kapal.customfonts.GoMytext
+                android:id="@+id/label"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/img"
+                android:gravity="center"
+                android:text="Data Kosong"
+                android:textSize="12sp"
+                android:textStyle="italic"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+
+                android:id="@+id/recyclerviewTemp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_crop_free_black_24dp" />
+</android.support.design.widget.CoordinatorLayout>

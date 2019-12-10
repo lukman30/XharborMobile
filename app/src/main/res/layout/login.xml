@@ -12,6 +12,35 @@
     android:background="@drawable/bgimagee">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="40dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:src="@drawable/perintis" />
+
+        <com.example.scan_tiket_kapal.customfonts.GoMytext
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Perintis Nusantara"
+            android:textColor="@color/putih"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+
+
+    </LinearLayout>
+
+
     <RelativeLayout
         android:focusable="true"
         android:focusableInTouchMode="true"
@@ -52,28 +81,7 @@
 
         <!--</LinearLayout>-->
 
-        <ImageView
-            android:layout_width="165dp"
-            android:layout_height="91dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="81dp"
-            android:src="@drawable/perintis" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="190dp"
-            android:layout_marginRight="30dp"
-            android:gravity="center"
-            android:text="Perintis Nusantara
-"
-            android:textColor="@color/putih"
-            android:textSize="14sp"
-            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -177,16 +185,16 @@
                 android:background="@color/putih" />
 
 
-            <com.example.scan_tiket_kapal.customfonts.Cardtext
+            <com.example.scan_tiket_kapal.customfonts.GoMytext
                 android:id="@+id/signin"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginRight="40dp"
                 android:layout_marginBottom="32dp"
-                android:background="@drawable/rect2"
+                android:background="@drawable/onboarding_button"
                 android:gravity="center"
                 android:text="LOGIN"
                 android:textColor="@color/white"
@@ -197,22 +205,22 @@
 
 
             <com.example.scan_tiket_kapal.customfonts.MyTextView
-                android:visibility="gone"
+
                 android:textStyle="italic"
                 android:id="@+id/acc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@id/signin"
                 android:gravity="center"
-                android:paddingBottom="10dp"
-                android:text="Belum Punya Akun?"
-                android:textColor="@color/colorAccent"
-                android:textSize="10dp"
+
+                android:text="Server Sudah Disetting?"
+                android:textColor="#fff"
+                android:textSize="9dp"
                  />
 
 
-            <com.example.scan_tiket_kapal.customfonts.MyTextView
-                android:visibility="gone"
+            <com.example.scan_tiket_kapal.customfonts.GoMytextMini
+
                 android:id="@+id/daftar"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
@@ -221,8 +229,8 @@
                 android:layout_marginRight="80dp"
                 android:layout_marginBottom="32dp"
                 android:gravity="center"
-                android:text="Daftar Sekarang"
-                android:textColor="@color/colorAccent"
+                android:text="Setting Server"
+                android:textColor="#fff"
                 android:textSize="16dp"
                 android:textStyle="bold"
                />

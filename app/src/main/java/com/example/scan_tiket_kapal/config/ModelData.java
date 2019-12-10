@@ -8,60 +8,50 @@ package com.example.scan_tiket_kapal.config;
 
 
 public class ModelData {
-  String id;
-    String mk;
-    String jam;
+ String idtiket;
+    String nama;
+    String status;
+    String kdbooking;
 
-    public String getMk() {
-        return mk;
+    public String getUmur() {
+        return umur;
     }
 
-    public void setMk(String mk) {
-        this.mk = mk;
+    public void setUmur(String umur) {
+        this.umur = umur;
     }
 
-    public String getJam() {
-        return jam;
+    String umur;
+
+    public String getIdtiket() {
+        return idtiket;
     }
 
-    public void setJam(String jam) {
-        this.jam = jam;
+    public void setIdtiket(String idtiket) {
+        this.idtiket = idtiket;
     }
 
-    public String getJenis() {
-        return jenis;
+    public String getNama() {
+        return nama;
     }
 
-    public void setJenis(String jenis) {
-        this.jenis = jenis;
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 
-    String jenis;
-    String isi;
-
-    public String getTanggal() {
-        return tanggal;
+    public String getStatus() {
+        return status;
     }
 
-    public void setTanggal(String tanggal) {
-        this.tanggal = tanggal;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    String tanggal;
-
-    public String getId() {
-        return id;
+    public String getKdbooking() {
+        return kdbooking;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getIsi() {
-        return isi;
-    }
-
-    public void setIsi(String isi) {
-        this.isi = isi;
+    public void setKdbooking(String kdbooking) {
+        this.kdbooking = kdbooking;
     }
 }

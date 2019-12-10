@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">E-TIKETING</string>
+    <string name="app_name">Xharbor</string>
 
     <string name="label_loading">Please Wait…</string>
     <string name="label_interval">Interval: </string>

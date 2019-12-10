@@ -1,50 +1,52 @@
 package com.example.scan_tiket_kapal;
 
-import android.app.Activity;
+import android.app.ActionBar;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.graphics.drawable.VectorDrawableCompat;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SwitchCompat;
-import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CompoundButton;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.scan_tiket_kapal.config.AppControler;
-import com.example.scan_tiket_kapal.config.ModelData;
+import com.example.scan_tiket_kapal.config.InternetDialog;
 import com.example.scan_tiket_kapal.config.PrefManager;
 import com.example.scan_tiket_kapal.config.Server;
+import com.example.scan_tiket_kapal.config.SettingIp;
+import com.example.scan_tiket_kapal.kargo.Kargo;
+import com.example.scan_tiket_kapal.kargo.QrScanKargo;
+import com.example.scan_tiket_kapal.penumpang.Penumpang;
+import com.example.scan_tiket_kapal.penumpang.QrScannerPenumpang;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import ss.com.bannerslider.banners.RemoteBanner;
 import ss.com.bannerslider.events.OnBannerClickListener;
@@ -54,57 +56,18 @@ import ss.com.bannerslider.views.indicators.IndicatorShape;
 public class Home extends AppCompatActivity implements View.OnClickListener {
 
     private static final String NOTIFICATION_MSG = "NOTIFICATION MSG";
-    String jarak;
-    Double latit, longit;
-    static final int gagal = 1, info = 2, berhasil = 3, cekimei = 4;
-
-    //get emai hp
-    String IMEI_Number_Holder;
-    TelephonyManager telephonyManager;
-
-
-    public static final int CONNECTION_TIMEOUT = 10000;
-    public static final int READ_TIMEOUT = 15000;
-
-
-    private EditText kodetahun, mhsw;
-    TextView ambiltahun, ambilmhsw;
-    Button btnlihat;
-    LinearLayout mainLayout;
-    String kode1, kode2;
-    private TextView infonilai;
-    private int userchoice;
-
-    private Button tampil;
-    ProgressDialog pd;
-    String ambilnim, ambilpwd;
 
     private ProgressDialog pDialog;
     private static final String TAG_MESSAGE = "message";
-    TextView adadosen;
-    private SharedPreferences prefssatu, prefpassword, prefnama;
-    private LinearLayoutManager linearLayoutManager;
-    public static final String AMBILNAMA = "ambilnama";
-    public static final String KEY_NAMA = "key_nama";
-    private SharedPreferences jadwalid;
-    private SharedPreferences prefsPrivate;
-    private String source, jml;
-    private SwipeRefreshLayout swipeRefreshLayout;
-    EditText nim;
-
-    TextView alamatt;
+    private SharedPreferences prefssatu, prefpassword;
 
     private FloatingActionButton fab;
-    private Button tampil1;
-    ProgressDialog pd1;
-    String ambilnim1, ambilpwd1, ambilusername;
 
-    private ProgressDialog pDialog1;
+    String ambilusername;
+
+
     private static final String TAG_MESSAGE1 = "message";
-    TextView adadosen1;
-    private SharedPreferences prefssatu1, prefpassword1;
-
-
+    private SharedPreferences prefssatu1, ipaplikasi;
     String alamat, pwd;
 
 
@@ -117,29 +80,31 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
 
     ProgressBar p1, p2, p3, p4;
 
-    TextView tidakadajadwal;
-
-//
-//    private Adapter_List mAdapter;
-
 
     private PrefManager prefManager;
     int success;
     private static final String TAG_SUCCESS = "success";
     String tag_json_obj = "json_obj_req";
 
+    String ip;
 
-    ////list informasi
-    RecyclerView mRecyclerview;
-    RecyclerView.LayoutManager mManager;
-    List<ModelData> mItems;
-    RecyclerView.Adapter mAdapter;
+    TextView top;
+
+    TextView ipserver;
+
+    CardView scanpenumpang,scankargo,about;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
+        getSupportActionBar().setElevation(0);
+
+        // CALL getInternetStatus() function to check for internet and display error dialog
+        if(new InternetDialog(this).getInternetStatus()){
+//            Toast.makeText(this, "INTERNET VALIDATION PASSED", Toast.LENGTH_SHORT).show();
+        }
 
         prefssatu = this.getSharedPreferences(
                 Login.SATU,
@@ -155,6 +120,35 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
                 Login.KEY_PASSWORD, "NA");
 
 
+        ipaplikasi =  this.getSharedPreferences(
+                SettingIp.IPAPLIKASI,
+                Context.MODE_PRIVATE +
+                        Context.MODE_PRIVATE | Context.MODE_PRIVATE);
+        ip=ipaplikasi.getString(
+                SettingIp.KEYAPLIKASI, "Belum Disetting");
+
+        ipserver=(TextView)findViewById(R.id.ipserver);
+        if (ipserver.getText().toString()==""||ipserver.getText().toString().equals("")){
+            ipserver.setText("Ip Server : Belum Disetting");
+        }else{
+            ipserver.setText("Ip Server : "+ip);
+        }
+
+
+
+        top=(TextView)findViewById(R.id.user) ;
+        top.setText("Selamat Datang, "+ambilusername);
+
+
+        scankargo=(CardView)findViewById(R.id.scankargo);
+        scanpenumpang=(CardView)findViewById(R.id.scanpenumpang);
+        about=(CardView)findViewById(R.id.about);
+
+        scanpenumpang.setOnClickListener(this);
+        scankargo.setOnClickListener(this);
+        about.setOnClickListener(this);
+
+
         p1 = (ProgressBar) findViewById(R.id.p1);
 //        p2 = (ProgressBar) findViewById(R.id.p2);
         bannerSlider = (BannerSlider) findViewById(R.id.banner_slider1);
@@ -167,19 +161,60 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         hideIndicatorsSwitch = (SwitchCompat) findViewById(R.id.checkbox_hide_indicators);
 
 
+        fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Home.this, SettingIp.class);
+                startActivity(intent);
+            }
+        });
+
+
+        TextView tv = new TextView(getApplicationContext());
+        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+        tv.setLayoutParams(lp);
+        tv.setText("Xharbor");
+        tv.setTextSize(20);
+        tv.setTextColor(Color.parseColor("#FFFFFF"));
+        Typeface tf = Typeface.createFromAsset(getAssets(), "font/NeoSansStdBlackTR.otf");
+        tv.setTypeface(tf);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(tv);
+
+
         ////informasi
         setupViews();
-        loadJson();
+//        loadJson();
 
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id){
+            case R.id.logout:
+                keluar();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
     private void setupViews() {
 //        setupToolbar();
         setupBannerSlider();
         setupPageIndicatorChooser();
         setupSettingsUi();
+        addBanners();
     }
 
     private void setupSettingsUi() {
@@ -266,16 +301,16 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
     private void addBanners(){
         //Add banners using image urls
         bannerSlider.addBanner(new RemoteBanner(
-                "https://assets.materialup.com/uploads/dcc07ea4-845a-463b-b5f0-4696574da5ed/preview.jpg"
+                "https://i.imgsafe.org/9c/9c1dcb67aa.png"
         ));
         bannerSlider.addBanner(new RemoteBanner(
-                "https://assets.materialup.com/uploads/4b88d2c1-9f95-4c51-867b-bf977b0caa8c/preview.gif"
+                "https://i.imgsafe.org/dc/dc74d9d025.jpeg"
         ));
         bannerSlider.addBanner(new RemoteBanner(
-                "https://assets.materialup.com/uploads/76d63bbc-54a1-450a-a462-d90056be881b/preview.png"
+                "https://i.imgsafe.org/dc/dc74ea56f1.gif"
         ));
         bannerSlider.addBanner(new RemoteBanner(
-                "https://assets.materialup.com/uploads/05e9b7d9-ade2-4aed-9cb4-9e24e5a3530d/preview.jpg"
+                "https://i.imgsafe.org/dc/dc74e8900d.jpeg"
         ));
 
     }
@@ -428,11 +463,23 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
 
-//            case R.id.off:
-//
-//                keluar();
+            case R.id.about:
 
-//                break;
+                About();
+
+                break;
+
+            case R.id.scanpenumpang:
+                startActivity(new Intent(Home.this, Penumpang.class));
+
+
+                break;
+
+            case R.id.scankargo:
+                startActivity(new Intent(Home.this, Kargo.class));
+
+
+                break;
         }
     }
 
@@ -445,10 +492,9 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
                         PrefManager prefManager = new PrefManager(getApplicationContext());
 
                         // make first time launch TRUE
-//                        prefManager.setFirstTimeLaunch(true);
-//
-//                        startActivity(new Intent(MenuAwalHomeClass.this, Login.class));
-//                        finish();
+                        prefManager.setFirstTimeLaunch(true);
+                        startActivity(new Intent(Home.this, Login.class));
+                        finish();
 
                     }
                 })
@@ -457,6 +503,22 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
                         dialog.cancel();
                     }
                 }).show();
+    }
+
+
+
+    void About(){
+        final Dialog dialog1 = new Dialog(Home.this, R.style.df_dialog);
+        dialog1.setContentView(R.layout.about);
+        dialog1.setCancelable(true);
+        dialog1.setCanceledOnTouchOutside(true);
+        dialog1.findViewById(R.id.btnSpinAndWinRedeem).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog1.dismiss();
+            }
+        });
+        dialog1.show();
     }
 
 }

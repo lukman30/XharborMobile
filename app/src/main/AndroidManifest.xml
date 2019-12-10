@@ -14,9 +14,9 @@
     <application
         android:name=".config.AppControler"
         android:allowBackup="true"
-        android:icon="@mipmap/ickapall"
+        android:icon="@mipmap/xharbor"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ickapall"
+        android:roundIcon="@mipmap/xharbor"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup,icon,theme,label">
@@ -29,51 +29,48 @@
             </intent-filter>
 
 
-
         </activity>
 
-        <activity android:name=".Home"/>
-        <activity android:name=".SettingIp"
-            android:theme="@style/Theme.Design.NoActionBar"/>
-        <activity android:name=".Login"
-            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity android:name=".Home" />
+        <activity
+            android:name=".config.SettingIp"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".config.SettingIPAwal"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:theme="@style/Theme.Design.NoActionBar" />
+
+        <activity
+            android:name=".penumpang.QrScannerPenumpang"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".penumpang.HasilScanPenumpang"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".kargo.QrScanKargo"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".kargo.HasilScanKargo"
+            android:theme="@style/AppTheme" />
 
 
+        <activity
+            android:name=".penumpang.Penumpang"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".kargo.Kargo"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/AppTheme" />
 
-
-<!--        <activity-->
-<!--            android:parentActivityName=".menumahasiswa.Menu"-->
-<!--            android:windowSoftInputMode="stateAlwaysHidden"-->
-<!--            android:name=".menumahasiswa.AlertInfo"/>-->
-<!--        <activity-->
-<!--            android:label="Scan Kode Batang"-->
-<!--            android:windowSoftInputMode="stateAlwaysHidden"-->
-<!--            android:name=".menumahasiswa.QrScanner"/>-->
-<!--        <activity-->
-<!--            android:parentActivityName=".menumahasiswa.Menu"-->
-<!--            android:label="Beranda Informasi"-->
-<!--            android:windowSoftInputMode="stateAlwaysHidden"-->
-<!--            android:name=".informasi.Informasi"/>-->
-<!--        <activity-->
-<!--            android:parentActivityName=".menumahasiswa.Menu"-->
-<!--            android:label="Beranda Histori"-->
-<!--            android:windowSoftInputMode="stateAlwaysHidden"-->
-<!--            android:name=".historipresensi.HistoriPresensi"/>-->
-
-<!--        <activity-->
-<!--            android:parentActivityName=".menudosen.MenuDosen"-->
-<!--            android:label="Qr Code"-->
-<!--            android:theme="@style/Theme.AppCompat.Light"-->
-<!--            android:windowSoftInputMode="stateAlwaysHidden"-->
-<!--            android:name=".dosen.QrCode"/>-->
-<!--        <activity-->
-<!--            android:parentActivityName=".menudosen.MenuDosen"-->
-<!--            android:label="Presensi Manual"-->
-<!--            android:theme="@style/Theme.AppCompat.Light"-->
-<!--            android:windowSoftInputMode="stateAlwaysHidden"-->
-<!--            android:name=".dosen.AbsenManual"/>-->
     </application>
-
 
 
 </manifest>

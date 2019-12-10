@@ -6,7 +6,8 @@
 
 package com.example.scan_tiket_kapal.config;
 
-public class Server {
-    public static final String URL = "http://36.66.192.46/applaboran/";
+import android.content.SharedPreferences;
 
+public class Server {
+    public static final String URL = "http://10.10.11.17/xharbor/";
 }
