@@ -1,5 +1,5 @@
 # XharborMobile
-Scanning Tiket Penumpang dan Kargo
+Scanning Tiket Penumpang dan Kargo Offline
 
 <img src="https://user-images.githubusercontent.com/11803800/70488712-32063500-1b2c-11ea-8a10-ba58ab5e3005.jpg" width="250px"/>
 <img src="https://user-images.githubusercontent.com/11803800/70488713-32063500-1b2c-11ea-8033-dff89714eb38.jpg" width="250px"/>
